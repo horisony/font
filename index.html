@@ -9,33 +9,38 @@
 		}
 		.btn{
 			width: 300px;
-			/*height: 29px;*/
-			/*border-bottom: 6px solid #ddd;
-			box-sizing: border-box;*/
-			/*padding: 6px;*/
 			font-family: my-font;
-			
+			font-size: 60px;
+			font-weight: bold;
+			color: blue;
 		}
-		.btn:hover{
-			/*border-bottom: 6px solid #ddd;
-			box-sizing: border-box;*/
-			/*outline: 4px solid #ccc;
-			outline-offset: 0px;*/
-			box-shadow: 0 3px 0 #000;
-		}
-		
-		
+		.bgimg{
+			width: 200px;
+		}	
 	</style>
 </head>
 <body>
-	<img style="float:left;" src="img/1.png">
+	<img style="width: 500px; float:left; background: #f9f9f9;" src="img/1_s.png">
+	<img style="width: 300px; float:left; background: #f9f9f9;" src="img/2_s.png">
+	<div class="bgimg"></div>
 	<div style="float:left;" class="btn" id="list1">中文</div>
-	<!-- <div id="dropdown">
-		<div class="btn" id="list2">list 2</div>	
-		<div class="btn" id="list3">list 3</div>	
-	</div>	 -->
 		
 
 </body>
+<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	window.onload = function () {
+        var arrS =['img/1.png', 'img/2.png'];
+        var imgA = document.getElementsByTagName('img');
+        for(var i = 0; i<imgA.length; i++) {
+            imgA[i].setAttribute('src',arrS[i]);
+        }
+        // $("img").on("load",function(){
+        // 	this.style.display="inline-block";
+        // })
+    }
+</script>
+
+
 </html>
 
