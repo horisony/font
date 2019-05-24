@@ -31,13 +31,11 @@
 <script type="text/javascript">
 	window.onload = function () {
         var arrS =['img/1.png', 'img/2.png'];
-        var imgA = document.getElementsByTagName('img');
-        for(var i = 0; i<imgA.length; i++) {
-            imgA[i].setAttribute('src',arrS[i]);
-        }
-        // $("img").on("load",function(){
-        // 	this.style.display="inline-block";
-        // })
+         $("img").on("load",function(){
+	        var imgA = document.getElementsByTagName('img');
+	        for(var i = 0; i<imgA.length; i++) {
+	            imgA[i].setAttribute('src',arrS[i]);
+	        }  	
     }
 </script>
 
