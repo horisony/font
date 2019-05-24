@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title></title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/demo.css"/> -->
+  	<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
 	<style type="text/css">
 		@font-face{
 			font-family: my-font;
@@ -15,8 +17,14 @@
 			color: blue;
 		}
 		.bgimg{
-			width: 200px;
+			width: 50px;
 		}	
+		.loading{
+			position: fixed;
+			left: calc(50% - 25px);
+			width: 200px;
+			top: 200px;
+		}
 	</style>
 </head>
 <body>
@@ -24,11 +32,17 @@
 	<img style="width: 300px; float:left; background: #f9f9f9;" src="img/2_s.png">
 	<div class="bgimg"></div>
 	<div style="float:left;" class="btn" id="list1">中文</div>
-		
+	<!-- <img class="loading" src="img/loading3.gif"> -->
+	<div class="loader loading">
+		<div class="loader-inner ball-scale">
+			<div></div>
+		</div>
+	</div>	
 
 </body>
 <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
 <script type="text/javascript">
+
     window.onload = function(){
     	var arrS =['img/1.png', 'img/2.png'];
     	var imgA = $('img');
@@ -36,6 +50,9 @@
     		imgA[i].addEventListener('load', imgA[i].setAttribute('src', arrS[i]) );
 		}
     }
+    $(document).ready(function(){
+    	$('.loading').fadeOut();
+    })
 </script>
 
 
